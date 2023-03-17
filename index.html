@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let numbers = parseInt(prompt("Nhập số lượng SGT: "));
+    let count = 1;
+    let N = 2;
+    let dataPrime = N;
+    while (count !== numbers){
+        N++;
+        let flag = true;
+        for (let j = 2; j <= Math.sqrt(N); j++) {
+            if (N % j === 0) {
+                flag = false;
+            }
+        }
+        if(flag){
+            dataPrime += ", " + N;
+            count++;
+        }
+    }
+    document.write(dataPrime);
+</script>
+</html>
